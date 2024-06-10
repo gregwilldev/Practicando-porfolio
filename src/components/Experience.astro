@@ -1,0 +1,35 @@
+---
+import type { ActionError } from "astro:actions"
+import ExperienceItem from "./ExperienceItem.astro"
+
+const EXPERIENCE = [
+    {
+        date: 'Actualmente...',
+        title: 'Estudiando HTML, CSS, and JAVASCRIPT',
+        description: 'Mejorando mucho,pero aun faltan cositas por aprender',
+        link: '#',
+    },
+    {
+        date: 'February 2022',
+        title: 'Application UI code in Tailwind CSS',
+        description: 'Experience here..............',
+        link: '#',
+    },
+    {
+        date: 'February 2022',
+        title: 'Application UI code in Tailwind CSS',
+        description: 'Experience here..............',
+        link: '#',
+    }
+]
+---
+<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-3">
+
+    {
+        EXPERIENCE.map( experience => (
+         <li class="mb-10 ms-4">
+            <ExperienceItem {... experience}/>
+         </li>
+        ) )
+    }  
+</ol>

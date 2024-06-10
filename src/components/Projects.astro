@@ -1,0 +1,28 @@
+
+---
+const PROJECTS = [
+    {
+        title: "SVGL - A beautiful library with SVG logos",
+        description: "A beautiful library with SVG logos",
+        link: "#",
+        github: "#",
+        image: "../public/396shots_so.png",
+        tags: ['HTML', 'CSS', 'JavaScript']
+    }
+]
+---
+
+{
+    PROJECTS.map(projects => (
+        <article>
+            <h3 class="text-lg font-semibold text-yellow-200 mb-4">{projects.title}</h3>
+            <p>{projects.description}</p>
+            <ul>
+                <li>{projects.tags}</li>
+            </ul>
+            <img 
+            class="rounded shadow-2xl shadow-white/20 mb-20"
+            src={projects.image} alt="Captura de pantalla del proyecto"/>
+        </article>
+    ))
+}

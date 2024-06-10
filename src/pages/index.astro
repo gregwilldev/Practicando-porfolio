@@ -1,0 +1,70 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+import SocialPill from "../components/SocialPill.astro";
+import LinkedInIcon from "../components/icons/LinkedIn.astro";
+import GithubIcon from "../components/icons/Github.astro";
+import MailbIcon from "../components/icons/Mail.astro";
+import Experience from "../components/Experience.astro";
+import Sections from "../components/Sections.astro";
+import ExpIcon from "../components/icons/ExperienceIcon.astro"
+import CodeIcon from "../components/icons/CodeIcon.astro";
+import Projects from "../components/Projects.astro";
+import Footer from "../components/Footer.astro"
+---
+
+<Layout title="Portafolio">
+  <main class="px-4">
+    <Sections class="py-44 pb-24">
+      <h1 class="text-white text-2xl lg:text-3xl font-bold flex flex-row gap-x-4 pb-4">
+        Hey, soy Greg
+        <a
+          href="https://www.linkedin.com/in/gregory-william-25bbb6311/"
+          target="_blank"
+          rel="noopener"
+          class="flex justify-center items-center"
+        >
+          <Badge>Disponible para trabajar</Badge>
+        </a>
+      </h1>
+
+      <h2 class="text-xl text-wrap">
+        +15 anos de experiencia. Desarrollador Web y Mobile. De Santo Domingo,
+        Republica Dominicana
+      </h2>
+
+      <nav class="flex gap-x-2 mt-6">
+        <SocialPill
+          href="https://www.linkedin.com/in/gregory-william-25bbb6311/"
+        >
+          <LinkedInIcon class="size-4" />
+          LinkedIn
+        </SocialPill>
+        <SocialPill href="https://github.com/gregwilldev">
+          <GithubIcon class="size-4" />
+          Github
+        </SocialPill>
+        <SocialPill href="mailto:Gregwilldev@gmail.com">
+          <MailbIcon class="size-4" />
+          gregwilldev@gmail.com
+        </SocialPill>
+      </nav>
+    </Sections>
+    <Sections id="experience">
+      <h2 class="text-2xl font-semibold pb-6 flex gap-x-2 items-center">
+        <ExpIcon class="size-6" />
+        Experiencia
+      </h2>
+      <Experience>
+      </Experience>
+    </Sections>
+    <Sections id="proyectos">
+      <h2 class="text-2xl font-semibold pb-6 flex gap-x-2 items-center">
+        <CodeIcon class="size-6" />
+        Proyectos
+      </h2>
+      <Projects/>
+    </Sections>
+    <Footer/>
+  </main>
+</Layout>
